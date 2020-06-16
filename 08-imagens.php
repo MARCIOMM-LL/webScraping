@@ -9,7 +9,7 @@ $browser = new HttpBrowser(HttpClient::create());
 
 $crawler = $browser->request('GET', 'https://vitormattos.github.io/poc-lineageos-cellphone-list-statics//');
 
-$images = $nomes = $crawler->filter('article .img-thumbnail')->images();
+$images = $crawler->filter('article .img-thumbnail')->images();
 
 if(!is_dir('images')){
     mkdir('images');
